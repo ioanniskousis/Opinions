@@ -662,7 +662,7 @@ label {
 #desktop > header {
   grid-area: head;
   background-color: $header-bcolor;
-  // background-image: url("opinions.png");
+  background-image: url('https://storage.googleapis.com/opinions-bucket/images/opinions.png');
   background-repeat: no-repeat;
   background-position: 24px 6px;
   padding: 15px 0 15px 20px;

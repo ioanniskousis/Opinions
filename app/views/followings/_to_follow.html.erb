@@ -4,11 +4,13 @@
       <label>
         <%= 'who To Follow' %>
       </label>
-      <img src="assets/sinchronize.png"/>
+      <% sinchronize_image = images_store + 'sinchronize.png' %>
+      <%= image_tag(sinchronize_image) %>
     </header>
   </div>
 
   <div class="sidebar-list">
+    <% plus_image = images_store + 'plus.png' %>
     <% @to_follow.each do |user| %>
       <% if user != @current_user %>
         <div class="banner">
@@ -22,7 +24,7 @@
           </div>
 
           <div class="plus">
-            <%= link_to(image_tag("plus.png", alt: "", class: 'half_size'), followings_path(user: user, view: @user_view, direction: @direction), method: :post ) %>
+            <%= link_to(image_tag(plus_image, alt: "", class: 'half_size'), followings_path(user: user, view: @user_view, direction: @direction), method: :post ) %>
           </div>
         </div>
       <% end %>

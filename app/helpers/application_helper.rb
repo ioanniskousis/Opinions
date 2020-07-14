@@ -12,25 +12,27 @@ module ApplicationHelper
   end
 
   def to_follow_button(user)
+    plus_image = images_store + 'plus.png'
     if @current_user.followed.include?(user) || (@current_user == user)
       tag.div(class: 'plus half_opacity') do
         tag.div do
-          image_tag('plus.png', alt: '', class: 'half_size')
+          image_tag(plus_image, alt: '', class: 'half_size')
         end
       end
     else
       tag.div(class: 'plus') do
         path = followings_path(user: user, view: @user_view, direction: @direction, view_user: @user)
-        link_to(image_tag('plus.png', alt: '', class: 'half_size'), path, method: :post)
+        link_to(image_tag(plus_image, alt: '', class: 'half_size'), path, method: :post)
       end
     end
   end
 
   def user_image_link_xlarge(user)
+    guest_image = images_store + 'guest-128.png'
     if user.photo_blob
       image_tag(user.photo_blob, alt: '')
     else
-      image_tag('guest-128.png', alt: '')
+      image_tag(guest_image, alt: '')
     end
   end
 
@@ -39,10 +41,16 @@ module ApplicationHelper
   end
 
   def following_arrow(user)
-    image_tag('follower.png', alt: '') if @current_user_followees.include?(user.id)
+    follower_image = images_store + 'follower.png'
+    image_tag(follower_image, alt: '') if @current_user_followees.include?(user.id)
   end
 
   def follower_arrow(user)
-    image_tag('follow.png', alt: '') if @current_user_followers.include?(user.id)
+    follow_image = images_store + 'follow.png'
+    image_tag(follow_image, alt: '') if @current_user_followers.include?(user.id)
+  end
+
+  def images_store
+    'https://storage.googleapis.com/opinions-bucket/images/'
   end
 end

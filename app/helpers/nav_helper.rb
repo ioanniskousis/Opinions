@@ -14,7 +14,7 @@ module NavHelper
     path = user_path(@current_user)
     cond = ((@direction == 'user' || @direction == 'edit_user') && (@user == @current_user))
     nav_class = cond ? 'nav-item nav-selected' : 'nav-item'
-    image = 'guest-w.png'
+    image = images_store + 'guest-w.png'
 
     tag.div(link_to(path, class: 'nav-item-link') do
       [image_tag(image, class: 'nav-item-image', alt: ''), tag.label(label, class: 'nav-item-label')].join.html_safe
@@ -27,7 +27,7 @@ module NavHelper
     label = 'logout'
     path = session_path(0)
     nav_class = 'nav-item'
-    image = 'logout.png'
+    image = images_store + 'logout.png'
 
     tag.div(link_to(path, method: :delete, class: 'nav-item-link') do
       [image_tag(image, class: 'nav-item-image', alt: ''), tag.label(label, class: 'nav-item-label')].join.html_safe
@@ -40,7 +40,7 @@ module NavHelper
     label = 'Home'
     path = opinions_path
     nav_class = (@direction == 'root' ? 'nav-item nav-selected' : 'nav-item')
-    image = 'home.png'
+    image = images_store + 'home.png'
 
     tag.div(link_to(path, class: 'nav-item-link') do
       [image_tag(image, class: 'nav-item-image', alt: ''), tag.label(label, class: 'nav-item-label')].join.html_safe
@@ -53,7 +53,7 @@ module NavHelper
     label = 'Users'
     path = users_path
     nav_class = (@direction == 'users' ? 'nav-item nav-selected' : 'nav-item')
-    image = 'users.png'
+    image = images_store + 'users.png'
 
     tag.div(link_to(path, class: 'nav-item-link') do
       [image_tag(image, class: 'nav-item-image', alt: ''), tag.label(label, class: 'nav-item-label')].join.html_safe
@@ -66,7 +66,7 @@ module NavHelper
     label = 'Log In'
     path = new_session_path
     nav_class = @direction == 'new_session' ? 'nav-item nav-selected' : 'nav-item'
-    image = 'login.png'
+    image = images_store + 'login.png'
 
     tag.div(link_to(path, class: 'nav-item-link') do
       [image_tag(image, class: 'nav-item-image', alt: ''), tag.label(label, class: 'nav-item-label')].join.html_safe
@@ -79,7 +79,7 @@ module NavHelper
     label = 'Sign Up'
     path = new_user_path
     nav_class = (@direction == 'new_user' ? 'nav-item nav-selected' : 'nav-item')
-    image = 'add-user.png'
+    image = images_store + 'add-user.png'
 
     tag.div(link_to(path, class: 'nav-item-link') do
       [image_tag(image, class: 'nav-item-image', alt: ''), tag.label(label, class: 'nav-item-label')].join.html_safe

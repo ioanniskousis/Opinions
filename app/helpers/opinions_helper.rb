@@ -13,9 +13,9 @@ module OpinionsHelper
   def like_button(opinion)
     likes = @likes.filter { |l| l.opinion_id == opinion.id }
     ilike = likes.map(&:user_id).include?(session[:user_id])
-    # ilike = opinion.likes.map(&:user_id).include?(session[:user_id])
-
-    button = ilike ? image_tag('heart-r.png') : image_tag('heart.png')
+    heart_image = images_store + 'heart.png'
+    heart_red_image = images_store + 'heart-r.png'
+    button = ilike ? image_tag(heart_red_image) : image_tag(heart_image)
     if ilike
       path = like_path(opinion.id, direction: @direction, view_user: @user, anchor: 'opinion' + opinion.id.to_s)
       tag.div(class: 'like-div') do
@@ -27,16 +27,5 @@ module OpinionsHelper
         [tag.span(likes.count, class: 'like-span'), link_to(button, path, method: :post)].join.html_safe
       end
     end
-    # if ilike
-    #   path = like_path(opinion.id, direction: @direction, view_user: @user, anchor: 'opinion' + opinion.id.to_s)
-    #   tag.div(class: 'like-div') do
-    #     [tag.span(opinion.likes.count, class: 'like-span'), link_to(button, path, method: :delete)].join.html_safe
-    #   end
-    # else
-    #   path = likes_path(opinion.id, direction: @direction, view_user: @user, anchor: 'opinion' + opinion.id.to_s)
-    #   tag.div(class: 'like-div') do
-    #     [tag.span(opinion.likes.count, class: 'like-span'), link_to(button, path, method: :post)].join.html_safe
-    #   end
-    # end
   end
 end

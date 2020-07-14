@@ -1,14 +1,15 @@
 <header>
-  <%= image_tag("bird.png", alt: "", width:"30", height: "30") %>
-  <%= image_tag(opinions_image, alt: "", class: "opinions-image") %>
+  <% bird_image = images_store + 'bird.png' %>
+  <%= image_tag(bird_image, alt: "", width:"30", height: "30") %>
   <%= flash.notice %>
   <div class="buttons">
-
+    <% pencil_image = images_store + 'pencil.png' %>
+    <% message_image = images_store + 'message.png' %>
+    <% search_image = images_store + 'search.png' %>
+    <% settings_image = images_store + 'settings.png' %>
     <%= image_tag(pencil_image, alt: "", width:"30", height: "30") %>
-    <%#= image_tag("pencil.png", alt: "", width:"30", height: "30") %>
-    
-    <%= image_tag("message.png", alt: "", width:"30", height: "30") %>
-    <%= image_tag("search.png", alt: "", width:"30", height: "30") %>
-    <%= image_tag("settings.png", alt: "", width:"30", height: "30") %>
+    <%= image_tag(message_image, alt: "", width:"30", height: "30") %>
+    <%= image_tag(search_image, alt: "", width:"30", height: "30") %>
+    <%= image_tag(settings_image, alt: "", width:"30", height: "30") %>
   </div>
 </header>

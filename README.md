@@ -1,6 +1,6 @@
 # Opinions - a Twitter redesign project
 
-<img src="app/assets/images/bird-blue.png" alt="Opinions" width="40" height="40">
+<img src="https://storage.googleapis.com/opinions-bucket/images/bird-blue.png" alt="Opinions" width="40" height="40">
 This is the Capstone project for the Ruby on Rails Course
 
 <hr />
@@ -30,7 +30,7 @@ This is the Capstone project for the Ruby on Rails Course
 <br />
 <p align="center">
   <a href="https://github.com/ioanniskousis/Opinions">
-    <img src="app/assets/images/microverse.png" alt="Microverse Logo" width="80" height="80">
+    <img src="https://storage.googleapis.com/opinions-bucket/images/microverse.png" alt="Microverse Logo" width="80" height="80">
   </a>
   
   <h3 align="center">Opinions Application</h3>
@@ -88,32 +88,32 @@ Additionally to the requirements, I added the following features :
 
 #### Sign Up
 
-<img src="app/assets/images/sign-up.png" alt="program interface">
+<img src="https://storage.googleapis.com/opinions-bucket/images/sign-up.png" alt="program interface">
 <hr />
 
 #### Log In
 
-<img src="app/assets/images/log-in.png" alt="program interface">
+<img src="https://storage.googleapis.com/opinions-bucket/images/log-in.png" alt="program interface">
 <hr />
 
 #### Opinions - Home
 
-<img src="app/assets/images/opinions-home.png" alt="program interface">
+<img src="https://storage.googleapis.com/opinions-bucket/images/opinions-home.png" alt="program interface">
 <hr />
 
 #### Users List
 
-<img src="app/assets/images/users-list.png" alt="program interface">
+<img src="https://storage.googleapis.com/opinions-bucket/images/users-list.png" alt="program interface">
 <hr />
 
 #### Users Details
 
-<img src="app/assets/images/user-details.png" alt="program interface">
+<img src="https://storage.googleapis.com/opinions-bucket/images/user-details.png" alt="program interface">
 <hr />
 
 #### Users Opinions
 
-<img src="app/assets/images/user-opinions.png" alt="program interface">
+<img src="https://storage.googleapis.com/opinions-bucket/images/user-opinions.png" alt="program interface">
 <hr />
 
 ## Video presentation
@@ -215,7 +215,7 @@ Additionally 2 tables are created by the ActiveStorage to keep links to the user
 
 ## ERD
 
-<img src="docs/Opinions.png" alt="ERD">
+<img src="https://storage.googleapis.com/opinions-bucket/images/Opinions-ERD.png" alt="ERD">
 
 <hr/>
 

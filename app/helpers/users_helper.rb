@@ -54,13 +54,13 @@ module UsersHelper
   def user_image(user)
     return user.photo_blob if user.photo_blob
 
-    'guest-128.png'
+    images_store + 'guest-128.png'
   end
 
   def user_coverimage(user)
     return user.cover_blob if user.cover_blob
 
-    'default-cover.jpeg'
+    images_store + 'default-cover.jpeg'
   end
 
   def user_image_link_large(user)
@@ -69,8 +69,9 @@ module UsersHelper
         image_tag(user.photo_blob, class: 'nav-item-image full_size', alt: '')
       end)
     else
+      guest_image = images_store + 'guest-128.png'
       tag.div(link_to(user_path(user), class: 'image') do
-        image_tag('guest-128.png', class: 'nav-item-image half_size', alt: '')
+        image_tag(guest_image, class: 'nav-item-image half_size', alt: '')
       end)
     end
   end
