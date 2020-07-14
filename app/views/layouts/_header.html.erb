@@ -1,10 +1,14 @@
 <header>
-<%= image_tag("bird.png", alt: "", width:"30", height: "30") %>
-<%= flash.notice %>
-<div class="buttons">
-  <%= image_tag("pencil.png", alt: "rss feed", width:"30", height: "30") %>
-  <%= image_tag("message.png", alt: "rss feed", width:"30", height: "30") %>
-  <%= image_tag("search.png", alt: "rss feed", width:"30", height: "30") %>
-  <%= image_tag("settings.png", alt: "rss feed", width:"30", height: "30") %>
-</div>
+  <%= image_tag("bird.png", alt: "", width:"30", height: "30") %>
+  <%= image_tag(opinions_image, alt: "", class: "opinions-image") %>
+  <%= flash.notice %>
+  <div class="buttons">
+
+    <%= image_tag(pencil_image, alt: "", width:"30", height: "30") %>
+    <%#= image_tag("pencil.png", alt: "", width:"30", height: "30") %>
+    
+    <%= image_tag("message.png", alt: "", width:"30", height: "30") %>
+    <%= image_tag("search.png", alt: "", width:"30", height: "30") %>
+    <%= image_tag("settings.png", alt: "", width:"30", height: "30") %>
+  </div>
 </header>

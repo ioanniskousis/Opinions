@@ -40,6 +40,17 @@ td {
   line-height: 18px;
 }
 
+.opinions-image {
+  position: absolute;
+  width: 447px;
+  height: 58px;
+  left: 24px;
+  top: 6px;
+  // background-color: black;
+  border: none;
+  z-index: -1;
+}
+
 div.field,
 div.actions {
   margin-bottom: 10px;
@@ -651,15 +662,16 @@ label {
 #desktop > header {
   grid-area: head;
   background-color: $header-bcolor;
-  background-image: url("opinions.png");
+  // background-image: url("opinions.png");
   background-repeat: no-repeat;
   background-position: 24px 6px;
   padding: 15px 0 15px 20px;
   position: sticky;
   top: 0;
+  overflow: hidden;
 
   .buttons {
-    width: 200px;
+    width: 300px;
     height: 30px;
     float: right;
     display: flex;
