@@ -11,15 +11,13 @@
   </head>
 
   <body>
-    <% cache do %>
-      <section id="desktop">
-        <%= draw_header %>
-        <%= draw_nav_bar %>
+    <section id="desktop">
+      <%= draw_header %>
+      <%= draw_nav_bar %>
 
-        <%= yield %>
+      <%= yield %>
 
-        <%= draw_side_bar %>
-      </section>
-    <% end %>
+      <%= draw_side_bar %>
+    </section>
   </body>
 </html>
