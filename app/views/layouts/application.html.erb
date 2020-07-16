@@ -4,12 +4,20 @@
     <title>Opinions</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <%= favicon_link_tag images_store + 'bird-blue.png' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <section id="desktop">
+      <%= draw_header %>
+      <%= draw_nav_bar %>
+
+      <%= yield %>
+
+      <%= draw_side_bar %>
+    </section>
   </body>
 </html>

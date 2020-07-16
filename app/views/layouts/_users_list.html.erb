@@ -1,0 +1,36 @@
+<div class="banners-list">
+  <label class="caption"><%= @users_list_caption %></label>
+  <% @users_list.each do |user| %>
+    <div class="banner">
+      <%= user_image_link_large(user) %>
+
+      <div class="details">
+        <p class="head"><%= user.username %></p>
+        <p><%= user.fullname %></p>
+        <div class='tooltip'>
+          <%= follower_arrow(user) %>
+          <span class="tooltiptext">Follower</span>
+        </div>
+        <div class='tooltip'>
+          <%= following_arrow(user) %>
+          <span class="tooltiptext">Followed</span>
+        </div>
+      </div>
+
+      <div class="users-index-info">
+        <p class="info-item">
+          <%= link_to('FOLLOWS', user_path(user, view: 'following')) %>
+          <%= tag.label(user_followees_count(@followees_matrix, user), class: 'stats-label') %>
+        </p>
+        <p class="info-item">
+          <%= link_to('FOLLOWERS', user_path(user, view: 'followers')) %>
+          <%= tag.label(user_followers_count(@followers_matrix, user), class: 'stats-label') %>
+        </p>
+        <p class="info-item">
+          <%= link_to('OPINIONS ', user_path(user, view: 'opinions')) %>
+          <%= tag.label(user_opinions_count(@opinions_matrix, user), class: 'stats-label') %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

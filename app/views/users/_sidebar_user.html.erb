@@ -1,0 +1,53 @@
+<div class="sidebar sidebar-user">
+  <div class="photo-banner">
+    <%= to_follow_button(@user) %>
+    <div class="photo">
+      <%= user_image_link_xlarge(@user) %>
+    </div>
+    <div class="plus half_opacity">
+      <%= image_tag(images_store + "list.png", alt: "", class: 'half_size') %>
+    </div>
+  </div>
+  <div class="name-banner">
+    <label><%= @user.fullname %></label>
+    <span><%= @user.username %></span>
+  </div>
+
+  <div class="info">
+    <div class="info-item">
+      <span><%= user_opinions_count(@opinions_matrix, @user) %></span>
+      <span>Opinions</span>
+    </div>
+    <div class="info-item">
+      <span><%= user_followees_count(@followees_matrix, @user) %></span>
+      <span>Following</span>
+    </div>
+    <div class="info-item">
+      <span><%= user_followers_count(@followers_matrix, @user) %></span>
+      <span>Followers</span>
+    </div>
+  </div>
+
+  <div class="caption">
+    <label>
+      <%= 'followed by' %>
+    </label>
+  </div>
+
+  <div class="sidebar-list">
+  <% @followers.each do |user| %>
+    <div class="banner">
+      <div class="image">
+        <%= link_to(image_tag(user_image(user), alt: ""), user_path(user, view: 'details')) %>
+      </div>
+
+      <div class="details">
+        <p class="head"><%= user.username %></p>
+        <p><%= user.fullname %></p>
+      </div>
+
+      <%= to_follow_button(user) %>
+    </div>
+  <% end %>
+  </div>
+</div>

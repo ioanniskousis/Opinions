@@ -1,0 +1,10 @@
+<main class="users-main">
+  <%= draw_users_main_menu %>
+  <div class="main-body">
+
+  <% @users_list = @users %>
+  <% @users_list_caption = @users.count.to_s + ' Users' %>
+  <%= render 'layouts/users_list' %>
+  
+  </div>
+</main>

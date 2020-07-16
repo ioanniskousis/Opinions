@@ -1,0 +1,20 @@
+<div class="current-user-banner-top">
+  <a href="<%= user_path(@current_user) %>" class="current-user-link"> 
+    <div>
+      <%= image_tag(user_image(@current_user), alt: "") %>
+    </div>
+    <div>
+      <%= label_tag(@current_user.username) %>
+    </div>
+  </a>
+</div>
+<div class="current-user-banner-bottom">
+  <div>
+    <label><%= user_followees_count(@followees_matrix, @current_user) %></label>
+    <label>following</label>
+  </div>
+  <div>
+    <label><%= user_followers_count(@followers_matrix, @current_user) %></label>
+    <label>followers</label>
+  </div>
+</div>
