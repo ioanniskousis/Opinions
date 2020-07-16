@@ -1,2 +1,2 @@
-*.rb linguist-language='Ruby on Rails'
-*.erb linguist-language='Ruby on Rails'
+*.rb linguist-language=Rails
+*.erb linguist-language=Rails
