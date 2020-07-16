@@ -174,6 +174,8 @@ Additionally 2 tables are created by the ActiveStorage to keep links to the user
     - Groups of interest, so opinions are organized in users' selected interests
     - Add images or other media attachements on each post
    
+<hr/>
+
 ## N+1 Problem
 
   The n+1 problem is encountered in this project into multiple case.  
