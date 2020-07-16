@@ -1,2 +1,2 @@
-*.rb linguist-language=RubyOnRails
-*.erb linguist-language=RubyOnRails
+*.rb linguist-language=RubyonRails
+*.erb linguist-language=RubyonRails
