@@ -1,0 +1,38 @@
+<div class="user-details-outer">
+  <div class="user-details">
+
+    <div>
+      <p><strong>Username</strong></p>
+      <p><%= @user.username %></p>
+    </div>
+
+    <div>
+      <p><strong>Fullname</strong></p>
+      <p><%= @user.fullname %></p>
+    </div>
+  </div>
+
+  <div class="user-photo">
+    <%#= image_tag(@user.photo, class: 'image') if @user.photo.attached? %> 
+    <%= image_tag(user_image(@user), alt: "", class: 'full_size') %>
+  </div>
+</div>
+
+<div class="stats">
+  <div>
+    <p><strong>Opinions</strong></p>
+    <p><%= user_opinions_count(@opinions_matrix, @user) %></p>
+  </div>
+  <div>
+    <p><strong>Following</strong></p>
+    <p><%= user_followees_count(@followees_matrix, @user) %></p>
+  </div>
+  <div>
+    <p><strong>Followers</strong></p>
+    <p><%= user_followers_count(@followers_matrix, @user) %></p>
+  </div>
+</div>
+
+<%= link_to_edit_user %>
+<%= link_to_unfollow(@user) %>
+<%= link_to_follow(@user) %>

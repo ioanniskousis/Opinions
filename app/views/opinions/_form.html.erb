@@ -1,0 +1,15 @@
+<div class="new-opinion">
+  <%= form_for(@opinion) do |form| %>
+    
+    <%= form.label 'tweet an opinion' %>
+    <%= form.text_field :text, id: :post_text, 
+      class: 'form-control', autofocus: true, placeholder: 'Compose new opinion' 
+    %>
+    <% if @opinion.errors.full_messages.any? %>
+      <p class="errors">
+        <%= "Opinion could not be saved. #{@opinion.errors.full_messages.join('. ')}" %>
+      </p>
+    <% end %>
+    <%= form.submit 'Save', class: 'btn btn-primary' %>
+  <% end %>
+</div>

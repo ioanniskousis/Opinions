@@ -1,0 +1,8 @@
+<%= draw_form %>
+
+<div class="banners-list">
+  <label class="caption">
+    <%= @user.opinions.count.to_s + ' ' + 'User Opinions' %>
+  </label>
+  <%= render 'opinions/opinions' %>
+</div>

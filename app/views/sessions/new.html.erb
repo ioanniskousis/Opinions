@@ -1,0 +1,21 @@
+<main class="new-user-main">
+  <div class="main-body">
+    <div class="form-div">
+
+      <%= form_with( url: sessions_path ) do |f| %>
+        <%= flash.alert %>
+
+        <div class="field">
+          <%= label_tag :username, "User Name to Log In" %><br />
+          <%= f.text_field :username, autofocus: true  %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Login"  %>
+        </div>
+
+      <% end %>
+
+    </div>
+  </div>
+</main>
