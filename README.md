@@ -67,6 +67,7 @@ Additionally to the requirements, I added the following features :
 - [Video presentation](#video-presentation)
 - [About the Project](#about-the-project)
 - [Extras](#extras)
+- [Future Features](#future-features)
 - [N+1 Problem](#n+1-problem)
 - [Entities Relationship Diagram](#erd)
 - [Live Version](#live-version)
@@ -167,6 +168,12 @@ Additionally 2 tables are created by the ActiveStorage to keep links to the user
 
 <hr/>
 
+## Future Features
+  ### Following versions may include 
+    - Comments on opinions posted by users, such that there is a conversation about each opinion
+    - Groups of interest, so opinions are organized in users' selected interests
+    - Add images or other media attachements on each post
+   
 ## N+1 Problem
 
   The n+1 problem is encountered in this project into multiple case.  
