@@ -46,11 +46,11 @@ This is the Capstone project for the Ruby on Rails Course
     <a href="https://github.com/ioanniskousis/Opinions/issues">Request Feature</a>
   </p>
 </p>
-  
+
 Opinions is based on a redesign of Twitter.  
-Is an application to share opinions about books, politics, health etc - anything that you can share opinions about with people who follow you.  
-  
-Additionally to the requirements, I added the following features :  
+It is an application to share opinions about books, politics, health, etc. - anything that you want to share opinions about with the people who follow you.  
+In addition to the project requirements, I added the following features:
+
   - User can check Likes to the Opinions  
   - Users are presented in 4 modes   
     - All  
