@@ -40,8 +40,8 @@ This is the Capstone project for the Ruby on Rails Course
     <br />
     <a href="https://github.com/ioanniskousis/Opinions"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
     <a href="https://opinions-jk.herokuapp.com">View Demo</a>
+    <br />
     <a href="https://github.com/ioanniskousis/Opinions/issues">Report Bug</a>
     <a href="https://github.com/ioanniskousis/Opinions/issues">Request Feature</a>
   </p>
